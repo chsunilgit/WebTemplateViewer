@@ -1,0 +1,90 @@
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 500px;
+  width: 100%; /* Add this line to make the width 100% of the parent container */
+}
+.main-image-container {
+  width: 100%;
+  max-width: 600px; /* Adjust the maximum width as needed */
+  /*height: auto;*/
+  height:600px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-image-container img {
+  max-height: 400px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+
+.thumbnail-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  height: 100px;
+  width: 100%; 
+}
+
+.thumbnails {
+  display: flex;
+  align-items: center;
+}
+
+.thumbnail {
+  position: relative;
+  flex: 0 0 auto;
+  height: 80px;
+  width: 120px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.thumbnail img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.thumbnail.active {
+  border-color: #333;
+}
+
+.thumbnail.previous-placeholder,
+.thumbnail.next-placeholder {
+  width: 40px; /* Adjust as needed */
+}
+
+.previous-button,
+.next-button {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+.previous-button {
+  background-image: url('../assets/previous.png');
+  background-size: cover;
+}
+
+.next-button {
+  background-image: url('../assets/next.png');
+  background-size: cover;
+}
+
+.previous-button.disabled,
+.next-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
